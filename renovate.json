@@ -1,4 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "description": "Block prerelease updates globally (alpha, beta, rc, next, preview, dev, experimental)",
+      "groupSlug": "block-prerelease-globally",
+      "enabled": false,
+      "matchCurrentVersion": ".*-(alpha|beta|rc|next|preview|dev|experimental).*"
+    }
+  ]
 }
