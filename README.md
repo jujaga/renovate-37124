@@ -1,17 +1,33 @@
-# minimal-reproduction-template
+# 37124
 
-First, read the [Renovate minimal reproduction instructions](https://github.com/renovatebot/renovate/blob/main/docs/development/minimal-reproductions.md).
-
-Then replace the current `h1` with the Renovate Issue/Discussion number.
+Reproduction for [Renovate Discussion 37124](https://github.com/renovatebot/renovate/discussions/37124).
 
 ## Current behavior
 
-Explain the current behavior here.
+Renovate Dependency Dashboard reports the following warning as seen in the [dashboard](https://github.com/jujaga/renovate-37124/issues/1):
+
+```md
+## Repository problems
+
+These problems occurred while renovating this repository. [View logs](https://developer.mend.io//github/jujaga/renovate-37124).
+
+ - WARN: Invalid hashicorp constraint
+```
+
+The warning log on Renovate repeats the following message multiple times:
+
+```txt
+WARN: Invalid hashicorp constraint
+{
+  "constraint": ".*-(alpha|beta|rc|next|preview|dev|experimental).*"
+  "element": ".*-(alpha|beta|rc|next|preview|dev|experimental).*"
+}
+```
 
 ## Expected behavior
 
-Explain the expected behavior here.
+These warnings should not be present, as the HashiCorp constraint syntax is valid and sound.
 
 ## Link to the Renovate issue or Discussion
 
-Put your link to the Renovate issue or Discussion here.
+Reproduction for [Renovate Discussion 37124](https://github.com/renovatebot/renovate/discussions/37124).
